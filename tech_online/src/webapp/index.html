@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Tech Online | Inventario</title>
+
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <script src="/js/app.js"></script>
+    </head>
+
+    <body>
+
+        <header>
+
+            <h1>Tech Online</h1>
+
+            <p>
+                Sistema interno de gestión de inventario
+            </p>
+
+        </header>
+
+
+        <main>
+
+            <section class="tarjeta">
+
+                <div class="cabecera-seccion">
+
+                    <h2>Inventario</h2>
+
+                    <button onclick="cargarProductos()">
+                        Actualizar inventario
+                    </button>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaProductos"></tbody>
+
+                </table>
+
+            </section>
+
+
+            <div class="acciones">
+
+                <section class="tarjeta">
+
+                    <h2>Realizar venta</h2>
+
+                    <label for="ventaProducto">Producto</label>
+
+					<select id="ventaProducto">
+					    <option value="">Selecciona un producto</option>
+					</select>
+
+                    <label for="ventaCantidad">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="ventaCantidad"
+                        min="1"
+                        placeholder="Ej: 2"
+                    >
+
+                    <button onclick="realizarVenta()">
+                        Realizar venta
+                    </button>
+
+                </section>
+
+
+                <section class="tarjeta">
+
+                    <h2>Reponer stock</h2>
+
+                    <label for="reponerProducto">Producto</label>
+
+					<select id="reponerProducto">
+					    <option value="">Selecciona un producto</option>
+					</select>
+
+                    <label for="reponerCantidad">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="reponerCantidad"
+                        placeholder="Ej: 10"
+                    >
+
+                    <button onclick="reponerStock()">
+                        Reponer producto
+                    </button>
+
+                </section>
+
+            </div>
+
+
+            <div
+                id="mensaje"
+                class="mensaje"
+            ></div>
+
+        </main>
+    </body>
+
+</html>
