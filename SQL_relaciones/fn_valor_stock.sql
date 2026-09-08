@@ -12,7 +12,7 @@ BEGIN
     WHERE p.id = p_id;
 
     RETURN v_valor;
-END
+END //
 
 DELIMITER ;
 

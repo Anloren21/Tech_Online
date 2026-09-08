@@ -15,7 +15,7 @@ BEGIN
     SET stock = stock + p_cantidad
     WHERE id = p_id;
 
-END 
+END //
 
 DELIMITER ;
 
